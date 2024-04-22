@@ -31,7 +31,7 @@
   </property>
   <property>
     <name>fs.s3a.endpoint</name>
-    <value>${env:S3_ENDPOINT}</value>
+    <value>http://minio:9000</value>
   </property>
   <property>
     <name>fs.s3a.connection.timeout</name>
@@ -591,7 +591,7 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionPassword</name>
-    <value>${env:POSTGRES_PASSWORD}</value>
+    <value>password</value>
     <description>password to use against metastore database</description>
   </property>
   <property>
@@ -2487,7 +2487,7 @@
   </property>
   <property>
     <name>hive.tez.log.level</name>
-    <value>INFO</value>
+    <value>DEBUG</value>
     <description>
       The log level to use for tasks executing as part of the DAG.
       Used only if hive.tez.java.opts is used to configure Java options.
@@ -3311,7 +3311,7 @@
   </property>
   <property>
     <name>hive.compactor.worker.threads</name>
-    <value>0</value>
+    <value>3</value>
     <description>
       How many compactor worker threads to run on this metastore instance. Set this to a
       positive number on one or more instances of the Thrift metastore service as part of
@@ -3350,7 +3350,7 @@
   </property>
   <property>
     <name>hive.compactor.delta.num.threshold</name>
-    <value>10</value>
+    <value>3</value>
     <description>
       Number of delta directories in a table or partition that will trigger a minor
       compaction.
@@ -4429,7 +4429,7 @@
   </property>
   <property>
     <name>hive.server2.logging.operation.level</name>
-    <value>EXECUTION</value>
+    <value>VERBOSE</value>
     <description>
       Expects one of [none, execution, performance, verbose].
       HS2 operation logging mode available to clients to be set at session level.

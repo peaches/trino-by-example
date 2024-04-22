@@ -16,7 +16,8 @@ RUN tar zxf /opt/app/apache-hive-3.1.2-bin.tar.gz -C /opt/app && \
 
 COPY hive-authz/build/libs/hive-authz.jar /opt/app/apache-hive-3.1.2-bin/lib/hive-authz.jar
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+#ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-arm64
 ENV HADOOP_HOME /opt/app/hadoop-3.2.2
 ENV HIVE_HOME /opt/app/apache-hive-3.1.2-bin
 ENV PATH $HADOOP_HOME/bin:$HIVE_HOME/bin:$JAVA_HOME/bin:$PATH

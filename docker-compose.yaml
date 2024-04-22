@@ -114,6 +114,7 @@ services:
           condition: service_healthy
 
     superset:
+      platform: linux/amd64
       #if issues building it, use the image below
       build: superset
       #image: ${REPO}cloudnativek8s/superset:latest-dev
