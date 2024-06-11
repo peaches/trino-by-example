@@ -40,7 +40,7 @@ services:
         - STORE_KEY=${STORE_KEY}
         - STORE_SECRET=${STORE_SECRET}
       volumes:
-        - ./hive/conf/hive-site.xml:/opt/app/apache-hive-3.1.2-bin/conf/hive-site.xml
+        - ./hive/conf/hive-site.xml:/opt/app/apache-hive-3.1.3-bin/conf/hive-site.xml
         - ./hive/data:/tmp/hive
         #copy output data directory from https://github.com/skhatri/spark-delta-by-example project
         - ./hive/output:/opt/data/output
